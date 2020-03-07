@@ -55,11 +55,7 @@ public class Main {
 
                 case "Kowalski":
 
-//                Comparator<String> porownywarka =
-//                        Comparator.naturalOrder();
-//                        String result = String.format(lastName,lastName);
-//                if (result == true )
-
+//
                     klient.getLastName();
                     klient4.getLastName();
                     klient.getLastName().equals(klient4.getLastName());
