@@ -1,7 +1,8 @@
 public class User {
 
+
     private String name;
-    private String lastName;
+    private static String lastName;
     private int age;
     private BankAccount bank;
 
@@ -14,7 +15,7 @@ public class User {
         this.name = name;
     }
 
-    public String getLastName() {
+    public static String getLastName() {
         return lastName;
     }
 

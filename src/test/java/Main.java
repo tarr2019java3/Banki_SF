@@ -56,10 +56,9 @@ public class Main {
                 case "Kowalski":
 
 //
-                    klient.getLastName();
-                    klient4.getLastName();
-                    klient.getLastName().equals(klient4.getLastName());
-                    klient.getLastName().equals(klient4.getLastName());
+                    User.getLastName();
+                    User.getLastName().equals(User.getLastName());
+
 
                     if (true)
                         System.out.println("Więcej niż jeden rekord. Podaj imię");
