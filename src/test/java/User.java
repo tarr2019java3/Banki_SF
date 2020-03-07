@@ -2,7 +2,7 @@ public class User {
 
 
     private String name;
-    private static String lastName;
+    private String lastName;
     private int age;
     private BankAccount bank;
 
@@ -15,7 +15,7 @@ public class User {
         this.name = name;
     }
 
-    public static String getLastName() {
+    public String getLastName() {
         return lastName;
     }
 

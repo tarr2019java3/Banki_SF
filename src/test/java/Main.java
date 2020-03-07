@@ -3,11 +3,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
 
-public class Main {
+public abstract class Main implements Comparator {
 
     public static void main(String[] args) {
 
@@ -49,21 +50,46 @@ public class Main {
 
             String lastName = login;
 
+            List<User> searchList = new ArrayList<>();
+
+            for (int i = 0; i < listaklientow.size(); i++) {
+                if (listaklientow.get(i).getLastName().equals(login)){
+                    searchList.add(listaklientow.get(i));
+
+                }
+            }
+            System.out.println("Więcej niż jeden klient. Podaj imię");
+
+            String imie = scanner.nextLine();
+
+
+            List<User> finalList = new ArrayList<>();
+            for (int i=0; i < searchList.size(); i++) {
+                if(searchList.get(i).getName().equals(imie)) {
+                    finalList.add(searchList.get(i));
+                    System.out.println(finalList);
+
+                }
+
+            }
+
+
             switch (lastName) {
 
 
                 case "Kowalski":
 
-//
-                    User.getLastName();
-                    User.getLastName().equals(User.getLastName());
+                    for (int i = 0; i < listaklientow.size(); i++) {
+                        if (listaklientow.get(i).getLastName().equals("Kowalski")){
+
+                        }
+                    }
+
+//                        User.getLastName();
+//                    User.getLastName().equals(User.getLastName());
 
 
-                    if (true)
-                        System.out.println("Więcej niż jeden rekord. Podaj imię");
-                    String imieduplikatu = scanner.nextLine();
-
-                    String name = imieduplikatu;
+                    String name = scanner.nextLine();
 
                     switch (name) {
 
